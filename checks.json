@@ -1,0 +1,20 @@
+[
+  {
+    "args": ["npm_optional_lock_diff.py", "examples/before-lock.json", "examples/retained-lock.json"],
+    "exit": 0,
+    "report": {"status": "pass", "regressions": []}
+  },
+  {
+    "args": ["npm_optional_lock_diff.py", "examples/before-lock.json", "examples/lost-lock.json"],
+    "exit": 1,
+    "report": {"status": "regressions", "regressions": [
+      {"importer": "", "dependency": "@native/root", "previous_target": "node_modules/@native/root"},
+      {"importer": "node_modules/@tools/worker", "dependency": "@native/engine", "previous_target": "node_modules/@native/engine"}
+    ]}
+  },
+  {
+    "args": ["npm_optional_lock_diff.py", "examples/before-lock.json", "examples/linked-lock.json"],
+    "exit": 2,
+    "report": {"status": "error", "error": {"code": "unsupported_link", "input": "after"}}
+  }
+]

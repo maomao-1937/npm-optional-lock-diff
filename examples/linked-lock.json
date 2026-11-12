@@ -1,0 +1,8 @@
+{
+  "name": "optional-diff-demo",
+  "lockfileVersion": 3,
+  "packages": {
+    "": {"optionalDependencies": {"@native/root": "1.0.0"}},
+    "node_modules/@native/root": {"link": true, "resolved": "packages/native-root"}
+  }
+}

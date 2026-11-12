@@ -1,0 +1,23 @@
+{
+  "name": "optional-diff-demo",
+  "lockfileVersion": 3,
+  "packages": {
+    "": {
+      "optionalDependencies": {
+        "@native/root": "1.0.0",
+        "missing-in-both": "1.0.0",
+        "new-missing": "1.0.0"
+      }
+    },
+    "node_modules/@tools/worker": {
+      "version": "1.0.0",
+      "optionalDependencies": {"@native/engine": "1.0.0"}
+    },
+    "node_modules/app": {"version": "1.0.0"},
+    "node_modules/app/node_modules/@tools/worker": {
+      "version": "1.0.0",
+      "optionalDependencies": {"@native/engine": "1.0.0"}
+    },
+    "node_modules/app/node_modules/@native/engine": {"version": "1.0.0", "optional": true}
+  }
+}
